@@ -5,12 +5,12 @@ import { useInView } from "framer-motion"
 import { useRef } from "react"
 
 const skills = {
-  "Языки": ["JavaScript", "TypeScript", "HTML5", "CSS3"],
-  "Фреймворки": ["React", "Next.js", "Vue.js", "Astro"],
-  "Стилизация": ["Tailwind CSS", "Sass/SCSS", "Styled Components", "CSS Modules"],
-  "Инструменты": ["Git", "Webpack", "Vite", "Figma"],
-  "Тестирование": ["Jest", "React Testing Library", "Cypress", "Playwright"],
-  "Другое": ["REST API", "GraphQL", "PWA", "Web Performance"],
+  Languages: ["JavaScript (ES6+)", "TypeScript"],
+  Frameworks: ["React", "Vue.js", "Next.js", "Angular"],
+  Styling: ["Tailwind CSS", "Sass/SCSS", "CSS Modules", "Styled Components"],
+  Testing: ["Jest", "Cypress"],
+  Tools: ["Git", "Vite", "Webpack", "Figma"],
+  Other: ["RESTful APIs", "Microfrontend Architecture", "PWA", "Web Performance"],
 }
 
 const containerVariants = {
@@ -43,7 +43,7 @@ export function Skills() {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-12 flex items-center gap-4">
             <span className="text-primary font-mono text-xl">02.</span>
-            Навыки
+            Skills
             <span className="h-px bg-border flex-1 max-w-xs" />
           </h2>
 
