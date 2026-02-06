@@ -65,7 +65,7 @@ export function Experience() {
           </h2>
 
           <div className="flex flex-col md:flex-row gap-8">
-            {/* Tabs */}
+            
             <div className="flex md:flex-col overflow-x-auto md:overflow-visible border-b md:border-b-0 md:border-l border-border">
               {experiences.map((exp, index) => (
                 <button
@@ -85,7 +85,6 @@ export function Experience() {
               ))}
             </div>
 
-            {/* Content */}
             <motion.div
               key={activeTab}
               initial={{ opacity: 0, x: 20 }}

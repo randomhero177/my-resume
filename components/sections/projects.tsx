@@ -73,7 +73,7 @@ export function Projects() {
 
   return (
     <section id="projects" className="py-24 px-6 md:px-12 lg:px-24 relative overflow-hidden">
-      {/* Background decorations */}
+      
       <div className="absolute top-1/4 -left-32 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 -right-32 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
 
@@ -104,7 +104,7 @@ export function Projects() {
             </p>
           </div>
 
-          {/* Bento Grid */}
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-[200px]">
             {projects.map((project, index) => {
               const Icon = project.icon
@@ -124,14 +124,13 @@ export function Projects() {
                     ${isMedium ? "md:row-span-2" : ""}
                   `}
                 >
-                  {/* Gradient background on hover */}
+                  
                   <div
                     className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
                   />
 
-                  {/* Content */}
                   <div className="relative h-full p-6 flex flex-col">
-                    {/* Header */}
+                    
                     <div className="flex items-start justify-between mb-4">
                       <div
                         className={`p-3 rounded-xl bg-gradient-to-br ${project.color} shadow-lg`}
@@ -162,7 +161,7 @@ export function Projects() {
                       </div>
                     </div>
 
-                    {/* Title & Description */}
+                    
                     <div className="flex-1">
                       <h3
                         className={`font-bold mb-2 group-hover:text-primary transition-colors ${
@@ -180,7 +179,7 @@ export function Projects() {
                       </p>
                     </div>
 
-                    {/* Technologies */}
+                    
                     <div className="flex flex-wrap gap-2 mt-4">
                       {project.technologies.map((tech) => (
                         <span
@@ -192,7 +191,7 @@ export function Projects() {
                       ))}
                     </div>
 
-                    {/* Hover arrow indicator for large cards */}
+                    
                     {isLarge && (
                       <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300">
                         <div className="p-3 rounded-full bg-primary text-primary-foreground">
@@ -202,7 +201,7 @@ export function Projects() {
                     )}
                   </div>
 
-                  {/* Decorative corner gradient */}
+                  
                   <div
                     className={`absolute -bottom-16 -right-16 w-32 h-32 bg-gradient-to-br ${project.color} rounded-full opacity-20 group-hover:opacity-40 group-hover:scale-150 transition-all duration-700`}
                   />
@@ -211,7 +210,7 @@ export function Projects() {
             })}
           </div>
 
-          {/* View more link */}
+          
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}

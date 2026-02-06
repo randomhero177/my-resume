@@ -192,8 +192,7 @@ export function Hero() {
               </div>
             </div>
           </motion.div>
-
-          {/* Terminal - Right side */}
+          
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -201,7 +200,7 @@ export function Hero() {
             className="lg:col-span-3 order-1 lg:order-2"
           >
             <div className="rounded-lg overflow-hidden border border-border bg-card shadow-2xl">
-              {/* Terminal header */}
+              
               <div className="flex items-center gap-2 px-4 py-3 bg-secondary/50 border-b border-border">
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 rounded-full bg-red-500" />
@@ -213,7 +212,6 @@ export function Hero() {
                 </span>
               </div>
 
-              {/* Terminal content */}
               <div className="p-4 md:p-6 font-mono text-sm md:text-base space-y-1 min-h-[280px]">
                 {terminalLines.map((line, index) => (
                   <TerminalLine
@@ -227,7 +225,7 @@ export function Hero() {
                   />
                 ))}
 
-                {/* Cursor at the end */}
+                
                 {completedLines.length === terminalLines.length && (
                   <div className="flex items-center gap-2 mt-2">
                     <span className="text-primary">guest@portfolio</span>
@@ -240,7 +238,7 @@ export function Hero() {
               </div>
             </div>
 
-            {/* CTA under terminal */}
+            
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -261,7 +259,7 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
+      
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -273,7 +271,7 @@ export function Hero() {
         </a>
       </motion.div>
 
-      {/* Decorative elements */}
+      
       <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
     </section>

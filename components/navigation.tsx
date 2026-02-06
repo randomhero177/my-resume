@@ -43,7 +43,7 @@ export function Navigation() {
             {"</>"}
           </a>
 
-          {/* Desktop Navigation */}
+          
           <ul className="hidden md:flex items-center gap-1">
             {navLinks.map((link, index) => (
               <li key={link.name}>
@@ -65,7 +65,7 @@ export function Navigation() {
             </li>
           </ul>
 
-          {/* Mobile Menu Button */}
+          
           <Button
             variant="ghost"
             size="icon"
@@ -78,7 +78,6 @@ export function Navigation() {
         </nav>
       </motion.header>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <>

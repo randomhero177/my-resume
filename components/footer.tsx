@@ -12,7 +12,6 @@ export function Footer() {
   return (
     <footer className="py-8 px-6 md:px-12 lg:px-24 border-t border-border">
       <div className="max-w-6xl mx-auto flex flex-col items-center gap-4">
-        {/* Social Links - Mobile Only */}
         <div className="flex gap-6 md:hidden">
           {socialLinks.map((social) => (
             <a
