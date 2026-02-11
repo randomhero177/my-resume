@@ -19,26 +19,22 @@ export function About() {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-12 flex items-center gap-4">
             <span className="text-primary font-mono text-xl">01.</span>
-            Обо мне
+            About me
             <span className="h-px bg-border flex-1 max-w-xs" />
           </h2>
 
           <div className="grid md:grid-cols-3 gap-12">
             <div className="md:col-span-2 space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Привет! Меня зовут <span className="text-foreground font-medium">[Ваше Имя]</span>, и я увлечен
-                созданием вещей, которые живут в интернете. Мой интерес к веб-разработке начался
-                ещё в 20XX году, когда я решил попробовать создать свой первый сайт.
+                Hi, <span className="text-foreground font-medium">I’m Konstantin</span>, a Senior Frontend Engineer with a strong background in building scalable web applications for both internal enterprise systems and customer-facing products.
               </p>
               <p>
-                С тех пор я имел возможность работать в <span className="text-primary">стартапе</span>,{" "}
-                <span className="text-primary">крупной корпорации</span> и{" "}
-                <span className="text-primary">на фрилансе</span>. Мой основной фокус сейчас —
-                создание доступных, инклюзивных продуктов и цифрового опыта.
+                Most of my experience comes from working as part of product and engineering teams in established companies, including <span className="text-primary">BASF, fl.ru, 1cloud.ru, and sape.ru</span>. I’ve contributed to large-scale platforms, high-traffic marketplaces, and enterprise-grade solutions, focusing on performance, maintainability, and long-term architecture.
+                Alongside my in-house experience, I’ve also delivered branded e-commerce projects such as <span className="text-primary">Barking Irons × Red Dead Redemption 2</span> and the <span className="text-primary">Kings of Leon merchandise store</span>, as well as developed my own educational web application — <span className="text-primary">Conjugate Me</span>.
               </p>
               <p>
-                Вне работы я увлекаюсь фотографией, путешествиями и изучением новых технологий.
-                Верю, что хороший код — это не только функциональность, но и искусство.
+                I enjoy working at the intersection of clean architecture, modern frontend technologies, and real business needs. My approach combines technical depth with practical execution — building systems that are not only functional, but reliable and scalable.
+                Open to collaborating on impactful web projects and frontend-focused initiatives.
               </p>
             </div>
 
