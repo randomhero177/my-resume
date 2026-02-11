@@ -7,12 +7,12 @@ import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
 const navLinks = [
-  { name: "Обо мне", href: "#about" },
-  { name: "Навыки", href: "#skills" },
-  { name: "Опыт", href: "#experience" },
-  { name: "Проекты", href: "#projects" },
-  { name: "Увлечения", href: "#hobbies" },
-  { name: "Контакты", href: "#contact" },
+  { name: "About me", href: "#about" },
+  { name: "Skills", href: "#skills" },
+  { name: "Experience", href: "#experience" },
+  { name: "Selected projects", href: "#projects" },
+  { name: "Hobbies", href: "#hobbies" },
+  { name: "Contact", href: "#contact" },
 ]
 
 export function Navigation() {
@@ -59,7 +59,7 @@ export function Navigation() {
             <li className="ml-4">
               <Button asChild variant="outline" size="sm">
                 <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-                  Резюме
+                  Resume
                 </a>
               </Button>
             </li>
