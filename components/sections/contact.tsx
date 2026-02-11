@@ -7,9 +7,9 @@ import { Button } from "@/components/ui/button"
 import { Mail, Github, Linkedin, Send } from "lucide-react"
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: Send, href: "https://t.me/username", label: "Telegram" },
+  { icon: Github, href: "https://github.com/randomhero177", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/konstantin-vasin-55395754/", label: "LinkedIn" },
+  { icon: Send, href: "https://t.me/skeiterov", label: "Telegram" },
 ]
 
 export function Contact() {

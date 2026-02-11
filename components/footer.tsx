@@ -28,10 +28,10 @@ export function Footer() {
         </div>
 
         <p className="text-muted-foreground text-sm font-mono text-center">
-          Создано с{" "}
+          Developed with{" "}
           <span className="text-primary">Next.js</span>,{" "}
-          <span className="text-primary">Tailwind CSS</span> и{" "}
-          <span className="text-accent">любовью</span>
+          <span className="text-primary">Tailwind CSS</span>,{" "}
+          <span className="text-accent">love and coffee</span>
         </p>
         <p className="text-muted-foreground/60 text-xs font-mono">
           {new Date().getFullYear()} | Ваше Имя
