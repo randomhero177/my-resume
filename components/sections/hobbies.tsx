@@ -3,39 +3,24 @@
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
-import { Camera, Gamepad2, Music, BookOpen, Plane, Coffee } from "lucide-react"
+import { BookOpen, Plane, Scale, GlobeIcon } from "lucide-react"
 
 const hobbies = [
   {
-    icon: Camera,
-    title: "Фотография",
-    description: "Люблю запечатлевать моменты городской жизни и путешествий",
+    icon: Scale,
+    title: "Scrum Master Certification",
+    description: "Completed professional Scrum training with focus on Agile team processes and delivery optimization."
   },
   {
-    icon: Gamepad2,
-    title: "Видеоигры",
-    description: "Indie-игры и стратегии — отличный способ отдохнуть",
-  },
-  {
-    icon: Music,
-    title: "Музыка",
-    description: "От классики до электроники. Иногда играю на гитаре",
+    icon: GlobeIcon,
+    title: "Languages",
+    description: "Russian (native), English (C2), Spanish (B2), Italian (B1). Actively improving fluency for international collaboration."
   },
   {
     icon: BookOpen,
-    title: "Чтение",
-    description: "Научная фантастика, книги по саморазвитию и техническая литература",
-  },
-  {
-    icon: Plane,
-    title: "Путешествия",
-    description: "Исследование новых мест и культур вдохновляет на новые идеи",
-  },
-  {
-    icon: Coffee,
-    title: "Кофе",
-    description: "Ценитель specialty кофе. V60 — мой любимый метод заваривания",
-  },
+    title: "Continuous Learning",
+    description: "Regularly study frontend architecture, DevOps practices, and scalable system design."
+  }
 ]
 
 export function Hobbies() {
@@ -53,7 +38,7 @@ export function Hobbies() {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-12 flex items-center gap-4">
             <span className="text-primary font-mono text-xl">05.</span>
-            Увлечения
+            Beyond Engineering
             <span className="h-px bg-border flex-1 max-w-xs" />
           </h2>
 

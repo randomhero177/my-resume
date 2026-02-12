@@ -11,7 +11,7 @@ const navLinks = [
   { name: "Skills", href: "#skills" },
   { name: "Experience", href: "#experience" },
   { name: "Selected projects", href: "#projects" },
-  { name: "Hobbies", href: "#hobbies" },
+  { name: "Beyond Engineering", href: "#hobbies" },
   { name: "Contact", href: "#contact" },
 ]
 
