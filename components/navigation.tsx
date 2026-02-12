@@ -7,12 +7,12 @@ import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
 const navLinks = [
-  { name: "Обо мне", href: "#about" },
-  { name: "Навыки", href: "#skills" },
-  { name: "Опыт", href: "#experience" },
-  { name: "Проекты", href: "#projects" },
-  { name: "Увлечения", href: "#hobbies" },
-  { name: "Контакты", href: "#contact" },
+  { name: "About me", href: "#about" },
+  { name: "Skills", href: "#skills" },
+  { name: "Experience", href: "#experience" },
+  { name: "Selected projects", href: "#projects" },
+  { name: "Beyond Engineering", href: "#hobbies" },
+  { name: "Contact", href: "#contact" },
 ]
 
 export function Navigation() {
@@ -43,7 +43,7 @@ export function Navigation() {
             {"</>"}
           </a>
 
-          {/* Desktop Navigation */}
+          
           <ul className="hidden md:flex items-center gap-1">
             {navLinks.map((link, index) => (
               <li key={link.name}>
@@ -56,16 +56,16 @@ export function Navigation() {
                 </a>
               </li>
             ))}
-            <li className="ml-4">
+            {/*<li className="ml-4">
               <Button asChild variant="outline" size="sm">
                 <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-                  Резюме
+                  Resume
                 </a>
               </Button>
-            </li>
+            </li>*/}
           </ul>
 
-          {/* Mobile Menu Button */}
+          
           <Button
             variant="ghost"
             size="icon"
@@ -78,7 +78,6 @@ export function Navigation() {
         </nav>
       </motion.header>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <>

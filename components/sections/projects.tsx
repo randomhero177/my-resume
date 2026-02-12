@@ -3,66 +3,73 @@
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
-import { ExternalLink, Github, ArrowUpRight, Sparkles, Zap, Layers, Globe, Terminal, Palette } from "lucide-react"
+import { ExternalLink, Github, ArrowUpRight, Sparkles, Zap, Layers, Globe, Terminal, Palette, FlameIcon, Music, Shield, BookOpen, Wine } from "lucide-react"
 
 const projects = [
   {
-    title: "E-Commerce Platform",
+    title: "Barking Irons × Red Dead Redemption 2 Collection Launch",
     description:
-      "Полнофункциональная платформа электронной коммерции с корзиной, оплатой и админ-панелью",
-    technologies: ["Next.js", "TypeScript", "Stripe", "Prisma"],
-    github: "https://github.com",
-    live: "https://example.com",
-    icon: Globe,
+        "Led frontend development for the official collaboration launch between Barking Irons and Rockstar Games (RDR2). Built high-performance Shopify storefront optimized for traffic spikes during product drop, ensuring seamless checkout experience.",
+    technologies: [
+      "Shopify",
+      "Liquid",
+      "JavaScript",
+      "Custom Theme Development",
+      "Performance Optimization",
+    ],
+    github: null,
+    live: "https://barkingirons.com",
+    icon: FlameIcon,
     color: "from-primary to-primary/50",
     size: "large",
   },
   {
-    title: "Task Manager",
-    description: "Drag-and-drop интерфейс с real-time обновлениями",
-    technologies: ["React", "Socket.io", "MongoDB"],
-    github: "https://github.com",
-    live: "https://example.com",
-    icon: Layers,
+    title: "Kings of Leon Official Merch Store",
+    description:
+        "Developed and launched the official merchandise store for Kings of Leon. Implemented custom Shopify theme, integrated third-party marketing tools, and optimized UX for international customers.",
+    technologies: [
+      "Shopify",
+      "Liquid",
+      "JavaScript",
+      "E-commerce",
+      "UX Optimization",
+    ],
+    github: null,
+    live: "https://kingsofleonshop.com",
+    icon: Music,
     color: "from-accent to-accent/50",
     size: "medium",
   },
   {
-    title: "Analytics Dashboard",
-    description: "Интерактивные графики и визуализация данных",
-    technologies: ["Vue 3", "D3.js", "Tailwind"],
-    github: "https://github.com",
-    live: "https://example.com",
-    icon: Zap,
-    color: "from-chart-3 to-chart-3/50",
+    title: "Conjugate Me — Spanish Learning App",
+    description:
+        "Designed and developed a non-profit educational web application for practicing Spanish verb conjugations. Built with a scalable frontend architecture and interactive training flow focused on UX and learning efficiency.",
+    technologies: [
+      "React",
+      "Tailwind CSS",
+      "State Management",
+      "Vercel",
+    ],
+    github: "https://github.com/randomhero177/conjugate-me",
+    live: "https://conjugate-me.vercel.app/",
+    icon: BookOpen,
+    color: "from-chart-5 to-chart-5/50",
     size: "medium",
   },
   {
-    title: "Weather App",
-    description: "Минималистичное приложение погоды с геолокацией",
-    technologies: ["React", "OpenWeather API"],
-    github: "https://github.com",
-    icon: Sparkles,
+    title: "Racimo de Uva — Winery Website",
+    description:
+        "Delivered a custom WordPress website for a Spanish winery, handling full development lifecycle from staging to production deployment. Implemented theme customization, performance optimization, and hosting migration.",
+    technologies: [
+      "WordPress",
+      "PHP",
+      "Custom Theme",
+      "Deployment",
+      "SEO Optimization",
+    ],
+    live: "https://www.racimodeuva.com/",
+    icon: Wine,
     color: "from-chart-4 to-chart-4/50",
-    size: "small",
-  },
-  {
-    title: "Markdown Editor",
-    description: "Live preview и экспорт в PDF",
-    technologies: ["TypeScript", "CodeMirror"],
-    github: "https://github.com",
-    live: "https://example.com",
-    icon: Terminal,
-    color: "from-chart-5 to-chart-5/50",
-    size: "small",
-  },
-  {
-    title: "Portfolio Template",
-    description: "Open source шаблон с анимациями",
-    technologies: ["Astro", "Framer Motion"],
-    github: "https://github.com",
-    icon: Palette,
-    color: "from-primary to-accent",
     size: "small",
   },
 ]
@@ -73,7 +80,7 @@ export function Projects() {
 
   return (
     <section id="projects" className="py-24 px-6 md:px-12 lg:px-24 relative overflow-hidden">
-      {/* Background decorations */}
+      
       <div className="absolute top-1/4 -left-32 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 -right-32 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
 
@@ -94,124 +101,102 @@ export function Projects() {
               04. Portfolio
             </motion.span>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Мои{" "}
+              Selected {" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                проекты
+                projects
               </span>
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Подборка работ, которыми я горжусь. Каждый проект — это история решения уникальных задач.
+              A curated selection of client and personal work. Each project represents a unique challenge and a practical, real-world solution.
             </p>
           </div>
 
-          {/* Bento Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-[200px]">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {projects.map((project, index) => {
               const Icon = project.icon
-              const isLarge = project.size === "large"
-              const isMedium = project.size === "medium"
 
               return (
-                <motion.div
-                  key={project.title}
-                  initial={{ opacity: 0, y: 30, scale: 0.95 }}
-                  animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className={`
-                    group relative overflow-hidden rounded-2xl border border-border bg-card
-                    hover:border-primary/50 transition-all duration-500
-                    ${isLarge ? "md:col-span-2 md:row-span-2" : ""}
-                    ${isMedium ? "md:row-span-2" : ""}
-                  `}
-                >
-                  {/* Gradient background on hover */}
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
-                  />
+                  <motion.div
+                      key={project.title}
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={isInView ? { opacity: 1, y: 0 } : {}}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      className=" group relative overflow-hidden rounded-2xl
+                        border border-border bg-card
+                        hover:border-primary/40
+                        transition-all duration-500"
+                  >
+                    
+                    <div
+                        className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
+                    />
 
-                  {/* Content */}
-                  <div className="relative h-full p-6 flex flex-col">
-                    {/* Header */}
-                    <div className="flex items-start justify-between mb-4">
-                      <div
-                        className={`p-3 rounded-xl bg-gradient-to-br ${project.color} shadow-lg`}
-                      >
-                        <Icon className="w-6 h-6 text-background" />
-                      </div>
-                      <div className="flex gap-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
-                        <a
-                          href={project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-2 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors"
-                          aria-label="GitHub"
+                    <div className="relative p-8 flex flex-col h-full">
+                      <div className="flex items-start justify-between mb-6">
+                        <div
+                            className={`p-3 rounded-xl bg-gradient-to-br ${project.color} shadow-lg`}
                         >
-                          <Github className="w-4 h-4" />
-                        </a>
-                        {project.live && (
-                          <a
-                            href={project.live}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="p-2 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors"
-                            aria-label="Live Demo"
-                          >
-                            <ExternalLink className="w-4 h-4" />
-                          </a>
-                        )}
-                      </div>
-                    </div>
+                          <Icon className="w-6 h-6 text-background" />
+                        </div>
 
-                    {/* Title & Description */}
-                    <div className="flex-1">
-                      <h3
-                        className={`font-bold mb-2 group-hover:text-primary transition-colors ${
-                          isLarge ? "text-2xl" : "text-lg"
-                        }`}
-                      >
-                        {project.title}
-                      </h3>
-                      <p
-                        className={`text-muted-foreground ${
-                          isLarge ? "text-base" : "text-sm"
-                        } line-clamp-3`}
-                      >
-                        {project.description}
-                      </p>
-                    </div>
+                        <div className="flex gap-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                          {project.github && (
+                              <a
+                                  href={project.github}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="p-2 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors"
+                                  aria-label="GitHub"
+                              >
+                                <Github className="w-4 h-4" />
+                              </a>
+                          )}
 
-                    {/* Technologies */}
-                    <div className="flex flex-wrap gap-2 mt-4">
-                      {project.technologies.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-2 py-1 text-xs font-mono rounded-md bg-secondary text-muted-foreground"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-
-                    {/* Hover arrow indicator for large cards */}
-                    {isLarge && (
-                      <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300">
-                        <div className="p-3 rounded-full bg-primary text-primary-foreground">
-                          <ArrowUpRight className="w-5 h-5" />
+                          {project.live && (
+                              <a
+                                  href={project.live}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="p-2 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors"
+                                  aria-label="Live Demo"
+                              >
+                                <ExternalLink className="w-4 h-4" />
+                              </a>
+                          )}
                         </div>
                       </div>
-                    )}
-                  </div>
 
-                  {/* Decorative corner gradient */}
-                  <div
-                    className={`absolute -bottom-16 -right-16 w-32 h-32 bg-gradient-to-br ${project.color} rounded-full opacity-20 group-hover:opacity-40 group-hover:scale-150 transition-all duration-700`}
-                  />
-                </motion.div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
+                          {project.title}
+                        </h3>
+
+                        <p className="text-muted-foreground text-sm leading-relaxed line-clamp-4">
+                          {project.description}
+                        </p>
+                      </div>
+
+                      <div className="flex flex-wrap gap-2 mt-6">
+                        {project.technologies.map((tech) => (
+                            <span
+                                key={tech}
+                                className="px-3 py-1 text-xs font-mono rounded-md bg-secondary text-muted-foreground"
+                            >
+                {tech}
+              </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div
+                        className={`absolute -bottom-20 -right-20 w-40 h-40 bg-gradient-to-br ${project.color} rounded-full opacity-10 group-hover:opacity-30 group-hover:scale-125 transition-all duration-700`}
+                    />
+                  </motion.div>
               )
             })}
           </div>
 
-          {/* View more link */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -219,13 +204,13 @@ export function Projects() {
             className="text-center mt-12"
           >
             <a
-              href="https://github.com"
+              href="https://github.com/randomhero177"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all group"
             >
               <Github className="w-5 h-5" />
-              Больше проектов на GitHub
+              More code on GitHub
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </a>
           </motion.div>

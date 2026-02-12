@@ -7,9 +7,9 @@ import { Button } from "@/components/ui/button"
 import { Mail, Github, Linkedin, Send } from "lucide-react"
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: Send, href: "https://t.me/username", label: "Telegram" },
+  { icon: Github, href: "https://github.com/randomhero177", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/konstantin-vasin-55395754/", label: "LinkedIn" },
+  { icon: Send, href: "https://t.me/skeiterov", label: "Telegram" },
 ]
 
 export function Contact() {
@@ -25,16 +25,16 @@ export function Contact() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-primary font-mono mb-4">06. Контакты</p>
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">Давайте работать вместе</h2>
+          <p className="text-primary font-mono mb-4">06. Contact</p>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">Let’s <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Work Together</span></h2>
           <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-            Сейчас я открыт для новых возможностей. Если у вас есть интересный проект или
-            предложение о работе — буду рад обсудить! Мой почтовый ящик всегда открыт.
+            I’m currently open to new opportunities and collaborations.
+            If you have an interesting project or would like to discuss a potential role, feel free to reach out — my inbox is always open.
           </p>
 
           <Button asChild size="lg" className="group mb-12">
-            <a href="mailto:your.email@example.com">
-              Написать письмо
+            <a href="mailto:randomhero177@gmail.com">
+              Send a message
               <Mail className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
           </Button>
