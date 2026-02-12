@@ -56,13 +56,13 @@ export function Navigation() {
                 </a>
               </li>
             ))}
-            <li className="ml-4">
+            {/*<li className="ml-4">
               <Button asChild variant="outline" size="sm">
                 <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
                   Resume
                 </a>
               </Button>
-            </li>
+            </li>*/}
           </ul>
 
           
