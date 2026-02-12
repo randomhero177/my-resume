@@ -7,38 +7,42 @@ import { cn } from "@/lib/utils"
 
 const experiences = [
   {
-    company: "Tech Company",
+    company: "BASF Digital solutions",
     role: "Senior Frontend Developer",
-    period: "2023 — Настоящее время",
+    period: "2023 - present",
+    companyDescription: "Enterprise digital organization within BASF developing mission-critical platforms for scientific research and global operational processes.",
     description: [
-      "Разработка и поддержка критически важных компонентов для основного продукта компании",
-      "Внедрение современных практик разработки и оптимизация производительности",
-      "Менторство junior-разработчиков и проведение code review",
-      "Участие в архитектурных решениях и планировании спринтов",
+      "Develop enterprise-grade web applications within a DevOps environment, supporting data-driven workflows in R&D.",
+      "Design and maintain scalable frontend architecture used by large internal user groups.",
+      "Collaborate cross-functionally with backend engineers, product owners, and external providers in an Agile/Scrum setup.",
+      "Contribute to lifecycle management, long-term maintainability, and team-level technical mentorship.",
     ],
-    technologies: ["React", "TypeScript", "Next.js", "GraphQL"],
+    technologies: ["Vue.js", "TypeScript", "Vite", "Gitlab CI/CD"],
   },
   {
-    company: "Digital Agency",
-    role: "Frontend Developer",
+    company: "FL.ru",
+    role: "Frontend Developer / Team Lead",
     period: "2021 — 2023",
+    companyDescription: "One of the largest freelance marketplaces in Russia with a large active user base.",
     description: [
-      "Создание адаптивных веб-приложений для клиентов из различных отраслей",
-      "Тесное сотрудничество с дизайнерами для реализации pixel-perfect интерфейсов",
-      "Интеграция с различными CMS и API",
-      "Оптимизация SEO и Web Vitals метрик",
+      "Led frontend development within one of the largest freelance marketplaces in Russia.",
+      "Owned quarterly technical planning, defining priorities and aligning engineering initiatives with product goals.",
+      "Conducted code reviews, maintained code quality standards, and mentored frontend developers.",
+      "Built modular, reusable Vue components with Storybook-driven development.",
+      "Conducted code reviews and improved build processes and codebase structure.",
+      "Collaborated closely with product managers, designers, QA, and backend engineers in a Scrum-based environment.",
     ],
-    technologies: ["Vue.js", "Nuxt", "Tailwind CSS", "REST API"],
+    technologies: ["Vue.js", "Storybook", "Javascript", "Webpack", "SSR"],
   },
   {
-    company: "Startup Inc",
-    role: "Junior Frontend Developer",
-    period: "2019 — 2021",
+    company: "LearMe",
+    role: "Lead Frontend Developer",
+    period: "2020 — 2021",
+    companyDescription: "EdTech platform focused on delivering interactive learning experiences through modern web applications.",
     description: [
-      "Разработка пользовательских интерфейсов для SaaS-платформы",
-      "Участие в переходе с jQuery на React",
-      "Написание unit и integration тестов",
-      "Поддержка legacy кода и рефакторинг",
+      "Developed a new Vue SPA from scratch with custom UI components.",
+      "Refactored and modernized a legacy Laravel monolith (jQuery → React architecture).",
+      "Reduced technical debt and restructured frontend build configuration.",
     ],
     technologies: ["React", "JavaScript", "SCSS", "Jest"],
   },
@@ -60,7 +64,7 @@ export function Experience() {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-12 flex items-center gap-4">
             <span className="text-primary font-mono text-xl">03.</span>
-            Опыт работы
+            Experience
             <span className="h-px bg-border flex-1 max-w-xs" />
           </h2>
 
@@ -98,6 +102,9 @@ export function Experience() {
               </h3>
               <p className="font-mono text-sm text-muted-foreground mb-4">
                 {experiences[activeTab].period}
+              </p>
+              <p className="text-sm text-muted-foreground italic mb-8 max-w-2xl">
+                {experiences[activeTab].companyDescription}
               </p>
               <ul className="space-y-3 mb-6">
                 {experiences[activeTab].description.map((item, i) => (

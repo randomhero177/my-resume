@@ -26,7 +26,7 @@ export function About() {
           <div className="grid md:grid-cols-3 gap-12">
             <div className="md:col-span-2 space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Hi, <span className="text-foreground font-medium">I’m Konstantin</span>, a Senior Frontend Engineer with a strong background in building scalable web applications for both internal enterprise systems and customer-facing products.
+                Hi, <span className="text-foreground font-medium">my name is Konstantin</span> and I'm a Senior Frontend Engineer with a strong background in building scalable web applications for both internal enterprise systems and customer-facing products.
               </p>
               <p>
                 Most of my experience comes from working as part of product and engineering teams in established companies, including <span className="text-primary">BASF, fl.ru, 1cloud.ru, and sape.ru</span>. I’ve contributed to large-scale platforms, high-traffic marketplaces, and enterprise-grade solutions, focusing on performance, maintainability, and long-term architecture.
