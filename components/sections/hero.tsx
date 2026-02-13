@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Github, Linkedin, Send, MapPin, Briefcase, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Image from "next/image";
 
 const terminalLines = [
   { type: "command", text: "whoami", delay: 0 },
@@ -134,7 +135,14 @@ export function Hero() {
                 <div className="relative w-32 h-32 mx-auto mb-6">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-full animate-pulse opacity-50" />
                   <div className="relative w-full h-full rounded-full border-4 border-background bg-secondary overflow-hidden flex items-center justify-center">
-                    <span className="text-4xl font-bold text-muted-foreground">?</span>
+                    <span className="text-4xl font-bold text-muted-foreground"><Image
+                        src="/images/ava_1.jpg"
+                        alt="Your Name"
+                        fill
+                        className="object-cover"
+                        priority
+                    /></span>
+
                   </div>
                   <div className="absolute bottom-1 right-1 w-5 h-5 bg-green-500 rounded-full border-4 border-card" />
                 </div>
