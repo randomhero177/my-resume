@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
+import Image from "next/image";
 
 export function About() {
   const ref = useRef(null)
@@ -44,7 +45,13 @@ export function About() {
                 <div className="relative w-full h-full bg-card rounded-lg overflow-hidden">
                   <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors" />
                   <div className="w-full h-full bg-muted flex items-center justify-center text-muted-foreground">
-                    <span className="text-6xl font-bold">?</span>
+                    <span className="text-6xl font-bold"><Image
+                        src="/images/ava_2.jpg"
+                        alt="Your Name"
+                        fill
+                        className="object-cover"
+                        priority
+                    /></span>
                   </div>
                 </div>
               </div>
